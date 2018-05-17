@@ -1,9 +1,13 @@
 pipeline {
   agent any
   stages {
-    stage('error') {
+    stage('test') {
       steps {
-        sh 'echo test'
+        sh '''echo test
+npm -v
+node -v
+pm2 -v
+$PATH'''
       }
     }
   }
